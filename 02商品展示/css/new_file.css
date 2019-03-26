@@ -1,0 +1,26 @@
+@charset "utf-8";
+*{
+	margin: 0px;
+	padding: 0px;
+}
+.show{
+	width: 360px;
+	height: 432px;
+	margin: 100px auto;
+	border: 1px solid black;
+}
+.show_up{
+	width: 360px;
+	height: 360px;
+	background-image: url(../img/01big.jpg);
+	
+}
+.show_down{
+	width: 360px;
+	height: 60px;
+	
+}
+.show_down img{
+	float: left;
+	width: 72px;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style >
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			body{
+				background-image: url(img/1.jpg);
+			}
+			div{
+				width: 1000px;
+				height: 100px;
+				margin: 100px auto;
+			}
+			img{
+				width: 200px;
+				height: 100px;
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<div >
+			<img src="img/1.jpg"/>
+			<img src="img/2.jpg"/>
+			<img src="img/3.jpg"/>
+			<img src="img/4.jpg"/>
+			<img src="img/5.jpg"/>
+		</div>
+		<script type="text/javascript">
+			window.onload=function(){
+				//获取节点
+				var img=document.getElementsByTagName("img");
+				var body=document.getElementsByTagName("body")[0];
+				
+				for(var i=0;i<img.length;i++){
+					//匿名函数
+					(function(i){
+						
+						img[i].onclick=function(e){
+							
+							var imgUrl=e.target.getAttribute("src");
+							document.body.style.backgroundImage="url("+imgUrl+")";
+						}
+					})(i);
+				}
+			}
+		</script>
+	</body>
+</html>
